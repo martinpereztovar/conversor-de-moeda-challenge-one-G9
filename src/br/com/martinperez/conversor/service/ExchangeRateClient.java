@@ -12,8 +12,9 @@ import java.net.http.HttpResponse;
 public class ExchangeRateClient {
 
     private HttpClient client = HttpClient.newHttpClient();
+    private Gson gson = new Gson();
 
-    public void createRequest(String from) {
+    public ExchangeRateResponse fetchRates(String from) {
         String apiKey = Config.getApiKey();
         String url = "https://v6.exchangerate-api.com/v6/" + apiKey + "/latest/" + from;
 
@@ -28,15 +29,14 @@ public class ExchangeRateClient {
 
             String json = response.body();
 
-            Gson gson = new Gson();
             ExchangeRateResponse data =
                     gson.fromJson(json, ExchangeRateResponse.class);
 
-            System.out.println("Base currency: " + data.getBaseCode());
-            System.out.println("BRL rate: " + data.getConversionRates().get("BRL"));
+            return data;
 
         } catch (Exception e) {
             System.out.println("Error contacting the API: " + e.getMessage());
+            return null;
         }
 
     }
