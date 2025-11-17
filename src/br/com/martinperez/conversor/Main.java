@@ -57,6 +57,10 @@ public class Main {
                 String fromCurrency = SupportedCurrencies.LIST[fromIndex - 1];
                 String toCurrency = SupportedCurrencies.LIST[toIndex - 1];
 
+                if (fromCurrency.equals(toCurrency)) {
+                    System.out.println("La moneda de origen y destino no pueden ser iguales. Intente nuevamente.");
+                    continue;
+                }
 
                 // Valor a convertir
                 System.out.print("Ingrese el valor a convertir: ");
