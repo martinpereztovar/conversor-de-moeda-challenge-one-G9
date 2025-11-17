@@ -44,6 +44,7 @@ Este projeto foi desenvolvido como parte do desafio de lógica e orientação a 
 ✔️ **Validação de opções do menu** (impede seleção de índices inválidos para as moedas)  
 ✔️ **Tratamento básico de erros** ao chamar a API (falha de rede, problema com a key, etc.)  
 ✔️ **Organização em camadas**: cliente HTTP, conversor, domínio (modelos), configuração
+✔️ **Validação de escolha de mesma moeda**: se impede a escolha da mesma moeda para origem/destino 
 
 ---
 
@@ -172,8 +173,7 @@ src/
 
 ## Melhorias Futuras
 
-- 🗣️ Versão em português e inglês  
-- 🧮 Impedir escolha da mesma moeda para origem/destino  
+- 🗣️ Versão em português e inglês   
 - 💾 Histórico de conversões  
 - 🎨 Interface gráfica (Swing, JavaFX ou web)  
 - 🧪 Testes automatizados
