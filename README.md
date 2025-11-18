@@ -40,11 +40,16 @@ Este projeto foi desenvolvido como parte do desafio de lógica e orientação a 
 ✔️ **Menu interativo em espanhol** no console  
 ✔️ **Suporte a 20+ moedas**, com foco em países da América Latina (BRL, ARS, COP, CLP, PEN, MXN, VES, etc.), além de USD e EUR  
 ✔️ **Seleção de moeda de origem e destino** a partir de uma lista numerada  
-✔️ **Entrada de valor para conversão** utilizando `Scanner`  
+✔️ **Entrada de valor para conversão** utilizando Scanner  
 ✔️ **Validação de opções do menu** (impede seleção de índices inválidos para as moedas)  
 ✔️ **Tratamento básico de erros** ao chamar a API (falha de rede, problema com a key, etc.)  
-✔️ **Organização em camadas**: cliente HTTP, conversor, domínio (modelos), configuração
-✔️ **Validação de escolha de mesma moeda**: se impede a escolha da mesma moeda para origem/destino 
+✔️ **Organização em camadas** cliente HTTP, conversor, domínio (modelos), configuração
+✔️ **Validação de escolha de mesma moeda** se impede a escolha da mesma moeda para origem/destino 
+✔️ **Formatação profissional de valores** (separador de milhares e 2 decimais)  
+✔️ **Proteção contra escolhas inválidas** (índices e mesmas moedas)  
+✔️ **Repetir última conversão** pedindo apenas um novo valor  
+✔️ **Histórico de conversões na sessão**  
+✔️ **Interface colorida (ANSI)** para melhor experiência no terminal  
 
 ---
 
@@ -55,20 +60,15 @@ Esta é uma aplicação **de linha de comando (console)**, sem interface gráfic
 Ao executar o programa, o usuário verá um fluxo semelhante a:
 
 ```text
-Bienvenido al conversor de monedas 💱
+============================================
+     🌎  Conversor de Monedas – LATAM  💱
+============================================
 
 Seleccione una opción:
 1) Nueva conversión
+2) Repetir última conversión
+3) Ver historial de la sesión
 0) Salir
-Opción: 1
-
-Monedas disponibles:
-1) USD
-2) EUR
-3) BRL
-4) ARS
-...
-23) VES
 
 Elige el número de la moneda de origen: 3
 Elige el número de la moneda de destino: 1
@@ -139,6 +139,15 @@ valor
 4. Inserir o valor
 5. Obter o resultado em tempo real
 
+----------------------------------------------
+
+1. Realizar una conversión normal (opción 1)  
+2. Elegir “Repetir última conversión”  
+3. Ingresar solo un nuevo valor  
+4. El programa utiliza automáticamente las mismas monedas de origen y destino  
+
+Este flujo permite comparar diferentes valores rápidamente sin navegar todo el menú nuevamente.
+
 ### 🌎 Conversões Latino-Americanas
 
 Permite combinações como:
@@ -174,7 +183,8 @@ src/
 ## Melhorias Futuras
 
 - 🗣️ Versão em português e inglês   
-- 💾 Histórico de conversões  
+- 🕒 Mostrar hora exacta de cada conversión en el historial  
+- 💾 Guardar historial en archivo externo (ej: JSON o TXT)   
 - 🎨 Interface gráfica (Swing, JavaFX ou web)  
 - 🧪 Testes automatizados
 
