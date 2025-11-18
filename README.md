@@ -32,6 +32,8 @@ Este projeto foi desenvolvido como parte do desafio de lógica e orientação a 
 - uso de coleções (`Map`),
 - organização do código em camadas.
 
+Além das funcionalidades básicas solicitadas no desafio, o projeto inclui melhorias adicionais como histórico de conversões, repetição da última conversão e interface colorida via ANSI, com o objetivo de tornar a experiência mais completa e profissional.
+
 ---
 
 ## Funcionalidades
