@@ -80,9 +80,16 @@ Ingrese el valor a convertir: 100
 
 ```
 
-[<img src="./assets/conversor-lista-moedas.png"><br><sub>Lista de moedas</sub>]
-[<img src="./assets/conversor-repetir.png"><br><sub>Opção repetir última conversão</sub>]
-[<img src="./assets/conversor-historico.png"><br><sub>Opção histórico de conversões</sub>]
+[<img src="./assets/conversor-lista-moedas.png" width="380"><br><sub>Lista de moedas</sub>](./assets/conversor-lista-moedas.png)
+
+<br><br>
+
+[<img src="./assets/conversor-repetir.png" width="380"><br><sub>Opção repetir última conversão</sub>](./assets/conversor-repetir.png)
+
+<br><br>
+
+[<img src="./assets/conversor-historico.png" width="380"><br><sub>Opção histórico de conversões</sub>](./assets/conversor-historico.png)
+
 
 ## Pré-requisitos
 
