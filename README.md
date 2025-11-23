@@ -80,6 +80,10 @@ Ingrese el valor a convertir: 100
 
 ```
 
+[<img src="./assets/conversor-lista-moedas.jpg"><br><sub>Lista de moedas</sub>]
+[<img src="./assets/conversor-repetir.jpg"><br><sub>Opção repetir última conversão</sub>]
+[<img src="./assets/conversor-historico.jpg"><br><sub>Opção histórico de conversões</sub>]
+
 ## Pré-requisitos
 
 ✅ **Java 17** ou superior  
